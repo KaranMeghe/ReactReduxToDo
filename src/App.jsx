@@ -1,5 +1,17 @@
+import { Provider } from "react-redux";
+import AddTodo from "./Components/AddTodo";
+import TodoItem from "./Components/ToDoItem";
+import store from "./App/store";
+
 function App() {
-  return <h1>Learn About Redux</h1>;
+  return (
+    <Provider store={store}>
+      <div>
+        <AddTodo />
+        <TodoItem />
+      </div>
+    </Provider>
+  );
 }
 
 export default App;
